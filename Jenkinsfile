@@ -10,7 +10,7 @@ properties([
    ])
 ])
 
-node(label) {
+node("master") {
   stage('check out') {
     checkout scm: [$class: 'GitSCM', branches: [[name: "refs/heads/${params.BRANCH}"]]] 
     }
