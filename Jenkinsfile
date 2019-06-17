@@ -10,6 +10,7 @@ pipeline {
     string(name: 'sTrAnGePaRaM',
       defaultValue: 'Dance!',
       description: 'Do the funky chicken!')
+    gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name: 'BRANCH', type: 'PT_BRANCH'
   }
   stages {
     stage('Example') {
