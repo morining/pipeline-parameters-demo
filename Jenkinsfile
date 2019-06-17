@@ -1,9 +1,5 @@
 pipeline {
   agent any
-  environment {
-    buildNum = currentBuild.getNumber()
-    buildVersion = '1.0.0'
-  }
   parameters {
     choice(name: 'door_choice',
       choices: 'one\ntwo\nthree\nfour',
@@ -17,10 +13,8 @@ pipeline {
   }
   stages {
     stage('Example') {
-     
       steps {
-        echo "${env.buildNum}"
-        echo "${env.buildVersion}"
+        echo "${env.BRANCH_NAME}"
         echo 'Hello World!'
         echo "Trying: ${params.door_choice}"
         echo "We can dance: ${params.CAN_DANCE}"
