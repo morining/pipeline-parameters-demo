@@ -6,9 +6,9 @@ pipeline {
   }
   stages {
     stage('Example') {
-      println "${params.BRANCH}"
       steps {
         git branch: "${params.BRANCH}", url: 'https://github.com/jenkinsci/git-parameter-plugin.git'
+        println "${params.BRANCH}"
       }
     }
   }
