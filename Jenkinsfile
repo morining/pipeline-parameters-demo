@@ -2,8 +2,6 @@ pipeline {
   agent any
   environment {
     buildNum = currentBuild.getNumber()
-    buildType = BRANCH_NAME.split('/').first()
-    branchVersion = BRANCH_NAME.split('/').last()
     buildVersion = '1.0.0'
   }
   parameters {
