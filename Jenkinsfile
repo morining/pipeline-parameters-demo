@@ -20,7 +20,7 @@ pipeline {
      
       steps {
         echo "${env.buildNum}"
-        echi "${env.buildVersion}"
+        echo "${env.buildVersion}"
         echo 'Hello World!'
         echo "Trying: ${params.door_choice}"
         echo "We can dance: ${params.CAN_DANCE}"
