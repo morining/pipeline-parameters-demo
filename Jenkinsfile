@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Example') {
       steps {
-        println "${env.BRANCH_NAME}"
+        println "${params.BRANCH}"
       }
     }
   }
