@@ -21,8 +21,9 @@ pipeline {
     stage('Example') {
      
       steps {
+        echo "${env.buildNum}"
+        echi "${env.buildVersion}"
         echo 'Hello World!'
-        echo "buildType:${env.buildType}"
         echo "Trying: ${params.door_choice}"
         echo "We can dance: ${params.CAN_DANCE}"
         echo "The DJ says: ${params.sTrAnGePaRaM}"
