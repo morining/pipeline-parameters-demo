@@ -8,7 +8,7 @@ pipeline {
         stage('Get Tag') {
             steps {
                 checkout([$class: 'GitSCM',
-                          branches: [[name: "${params.TAG}"]],
+                          branches: [[name: "${params.BRANCH}"]],
                           doGenerateSubmoduleConfigurations: false,
                           extensions: [],
                           gitTool: 'Default',
